@@ -36,6 +36,9 @@ sed -i '/CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE/d' .config  # 删除配置�
 sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config             # 删除配置项 OpenSSH 
 sed -i "/CONFIG_FIRMWARE_INCLUDE_DDNS_SSL/d"  .config           # HTTPS support for DDNS client
 sed -i "/CONFIG_FIRMWARE_INCLUDE_HTTPS/d"  .config              # HTTPS support
+sed -i "/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_SERVER/d"  .config           # VPN
+sed -i "/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CLIENT/d"  .config              # VPN
+sed -i "/CONFIG_FIRMWARE_INCLUDE_SOFTETHERVPN_CMD/d"  .config              # VPN
 
 # C大
 sed -i '/CONFIG_FIRMWARE_INCLUDE_MENTOHUST/d' .config    # 删除配置项 MENTOHUST
@@ -65,7 +68,10 @@ echo "CONFIG_FIRMWARE_INCLUDE_IPT2SOCKS=n" >> .config    # IPT2
 
 
 # 广告
-echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config       # adbyby plus+
+echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >> .config       # adbyby plus+
+echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config       # ADGUARDHOME
+
+
 
 # DNS 有关
 echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> .config # DNS-FORWARDER
